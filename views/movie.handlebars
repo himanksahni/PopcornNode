@@ -1,0 +1,39 @@
+<div class="row">
+
+    <div class="col-md-3">
+
+        <p><img src="https://image.tmdb.org/t/p/w200/{{movieForTemplate.poster_path}}" alt="{{movieForTemplate.title}}"> </p>
+
+        <p><a href="https://www.youtube.com/watch?v={{videoForTemplate.key}}" class="btn btn-outline-primary" target="_blank">Go see the Trailer</a></p>
+
+    </div>
+
+    <div class="col-md-9">
+
+        <h2>{{movieForTemplate.title}}</h2>
+
+        <p>{{movieForTemplate.overview}}</p>
+
+        <a href="/movies/{{movieForTemplate.id}}/reviews/new" class="btn btn-default btn-danger">Add a new review</a>
+
+
+
+    </div>
+
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+    <h1 class="col-md-12">Reviews</h1>
+    
+    <div class="row">
+    {{#each reviewsFortemplate}}
+        {{> reviewPartials}}
+    {{/each}}
+
+    </div>
+</div>
+
+</div>

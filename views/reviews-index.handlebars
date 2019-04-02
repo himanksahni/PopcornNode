@@ -1,0 +1,21 @@
+<h1> Reviews </h1>
+{{!-- <a href="reviews/new">Create a new Review</a> --}}
+
+<div class="row">
+                {{#each reviewsFortemplate}}
+
+                <div class="col-sm-4">
+
+                <div class="card" style="width: 18rem;"></div>
+                <div class="card-body">
+                <a class="card-title card-link" href="/reviews/{{this._id}}"><h2>{{this.title}}</h2> </a>
+
+                <h5 class="card-subtitle mb-2 text-muted">{{this.movieTitle}}</h5>
+
+                <p class="card-text"> {{ this.description}}</p>
+            </div>
+</div>
+{{/each}}
+
+
+</div>

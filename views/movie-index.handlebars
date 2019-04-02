@@ -1,0 +1,30 @@
+{{!-- <h1>Now Playing</h1>
+{{#each movies}}
+      
+    <h2>{{this.title}}</h2>
+    <div>
+        <p><img src="https://image.tmdb.org/t/p/w200/{{this.poster_path}}" alt="{{this.title}}"></p>
+
+        <p>{{this.overview}}</p>
+    </div>
+{{/each}} --}}
+
+<h1 class="pb-4 pt-4" align="center">Movies on theatre</h1>
+
+
+<div class="row">
+
+{{#each movies}}
+    <div class="col-md-4 pb-4">
+        <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w200/{{this.poster_path}}" alt="{{this.title}}" height="350">
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.overview}}</p>
+            <a href="/movies/{{this.id}}" class="btn btn-primary">Go to {{this.title}}</a>
+        </div>
+    </div>
+</div>
+{{/each}}
+
+</div>

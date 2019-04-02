@@ -1,0 +1,18 @@
+<hr>
+<form method="POST" action="/reviews/comment">
+    <div class="form-group">
+        <label for="commentTitle"> Commen Title</label> <br>
+        <input class="form-control" type="text" name="commentTitle"> <br>
+    </div>
+
+    <div class="form-group">
+        <label for="commentDescription">Comment Description</label> <br>
+        <textarea name="commentDescription" id="" cols="30" rows="10" class="form-control"></textarea><br>
+    </div>
+
+    <input type="hidden" value="{{reviewsFortemplate._id}}" name="reviewId">
+
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit Comment</button>
+    </div>
+</form>

@@ -1,0 +1,26 @@
+
+<a href="/movies/{{reviewsFortemplate.movieId}}">Go back to the movie</a>
+<div class="row">
+<div class="col-md-6">
+<h1>{{reviewsFortemplate.title}}</h1>
+<h2>{{reviewsFortemplate.movieTitle}}</h2>
+<p>{{reviewsFortemplate.description}}</p>
+
+<a class="btn btn-primary" href="/reviews/{{reviewsFortemplate._id}}/edit">Edit review</a>
+
+<form method ="POST"  action="/reviews/{{reviewsFortemplate._id}}/?_method=DELETE">
+    <br>
+    <button type="submit" class="btn btn-danger">Delete review</button>
+</form>
+
+{{>commentPartial}}
+
+<hr>
+{{#each commentsFortemplate}}
+      {{> commentOnShowpartial}}
+    {{/each}}
+
+ </div>
+</div>
+
+{{!-- <a href="/reviews/{{reviewsFortemplate._id}}/?_method=DELETE">Delete review</a> --}}
